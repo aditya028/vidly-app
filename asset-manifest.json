@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/vidly-app/static/css/main.502793b2.chunk.css",
+    "main.js": "/vidly-app/static/js/main.3639f0d4.chunk.js",
+    "main.js.map": "/vidly-app/static/js/main.3639f0d4.chunk.js.map",
+    "runtime-main.js": "/vidly-app/static/js/runtime-main.6adbd1f2.js",
+    "runtime-main.js.map": "/vidly-app/static/js/runtime-main.6adbd1f2.js.map",
+    "static/css/2.a75f5a2c.chunk.css": "/vidly-app/static/css/2.a75f5a2c.chunk.css",
+    "static/js/2.27549b36.chunk.js": "/vidly-app/static/js/2.27549b36.chunk.js",
+    "static/js/2.27549b36.chunk.js.map": "/vidly-app/static/js/2.27549b36.chunk.js.map",
+    "static/js/3.35946eeb.chunk.js": "/vidly-app/static/js/3.35946eeb.chunk.js",
+    "static/js/3.35946eeb.chunk.js.map": "/vidly-app/static/js/3.35946eeb.chunk.js.map",
+    "index.html": "/vidly-app/index.html",
+    "static/css/2.a75f5a2c.chunk.css.map": "/vidly-app/static/css/2.a75f5a2c.chunk.css.map",
+    "static/css/main.502793b2.chunk.css.map": "/vidly-app/static/css/main.502793b2.chunk.css.map",
+    "static/js/2.27549b36.chunk.js.LICENSE.txt": "/vidly-app/static/js/2.27549b36.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6adbd1f2.js",
+    "static/css/2.a75f5a2c.chunk.css",
+    "static/js/2.27549b36.chunk.js",
+    "static/css/main.502793b2.chunk.css",
+    "static/js/main.3639f0d4.chunk.js"
+  ]
+}

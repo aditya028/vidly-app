@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,EACE,QAAS,CACT,SACF,CACA,QACE,iBACF,CACA,gBACE,eACF,CACA,YACE,kBACF","file":"main.502793b2.chunk.css","sourcesContent":["*{\n  margin: 0;\n  padding: 0;\n}\n.navbar{\n  margin-bottom: 5vh;\n}\n.form-container {\n  margin:1em 15em;\n}\n.form-group{\n  padding-bottom: 2em;\n}\n"]}
