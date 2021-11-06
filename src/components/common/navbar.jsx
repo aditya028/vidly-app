@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
           <NavLink className="nav-link" to="/movies">
-            Movies <span className="sr-only">(current)</span>
+            Movies
           </NavLink>
           <NavLink className="nav-link" to="/customers">
             Customers

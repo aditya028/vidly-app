@@ -1,4 +1,6 @@
 import React from "react";
+import Input from "./common/Input";
+
 class Login extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
@@ -19,27 +21,16 @@ class Login extends React.Component {
       <div>
         <form className="form-container" onSubmit={this.handleSubmit}>
           <h1>Login</h1>
-          <div className="form-group ">
-            <label htmlFor="username">UserName</label>
-            <input
-              value={account.username}
-              onChange={this.handleChange}
-              type="username"
-              className="form-control"
-              id="username"
-            />
-          </div>
-          <div className="form-group ">
-            <label htmlFor="password">Password</label>
-            <input
-              value={account.password}
-              onChange={this.handleChange}
-              type="password"
-              className="form-control"
-              id="password"
-            />
-          </div>
-
+          <Input
+            name="username"
+            value={account.username}
+            onChange={this.handleChange}
+          />
+          <Input
+            name="password"
+            value={account.password}
+            onChange={this.handleChange}
+          />
           <button className="btn btn-primary">Login</button>
         </form>
       </div>
