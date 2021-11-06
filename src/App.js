@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { BrowserRouter , Route, Redirect} from "react-router-dom";
+import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import Navbar from "./components/common/navbar";
 import Movies from "./components/movies";
 import Customers from "./components/customers";
-import Rentals from "./components/rentals"
+import Rentals from "./components/rentals";
 import SaveMovies from "./components/saveMovies";
 import Login from "./components/login";
 
