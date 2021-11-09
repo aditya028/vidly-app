@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import Navbar from "./components/common/navbar";
 import Movies from "./components/movies";

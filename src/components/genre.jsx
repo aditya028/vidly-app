@@ -1,7 +1,7 @@
 import React from "react";
 
-const Genre = props => {
-    const {handleGenre , currentGenre , genre} = props ; 
+const Genre = (props) => {
+  const { handleGenre, currentGenre, genre } = props;
   return (
     <div className="list-group">
       <a
@@ -17,7 +17,7 @@ const Genre = props => {
       </a>
       {genre.map((g) => (
         <a
-          key = {g._id}
+          key={g._id}
           href="#"
           onClick={() => handleGenre(g.name)}
           className={

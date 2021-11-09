@@ -4,7 +4,7 @@ import _ from "lodash";
 class Pagination extends React.Component {
   render() {
     //destructuring props values
-    const { numOfMovies, pageSize, onPageChange , currentPage} = this.props;
+    const { numOfMovies, pageSize, onPageChange, currentPage } = this.props;
 
     // counting the number of pages
     const pageCount = Math.ceil(numOfMovies / pageSize);
@@ -19,11 +19,16 @@ class Pagination extends React.Component {
       <nav aria-label="Page navigation example">
         <ul className="pagination">
           {page.map((page) => (
-            <li key={page} className={currentPage === page ? "page-item active " : "page-item "}>
+            <li
+              key={page}
+              className={
+                currentPage === page ? "page-item active " : "page-item "
+              }
+            >
               <a
                 onClick={() => onPageChange(page)}
                 className="page-link "
-                href="#"
+                href="/"
               >
                 {page}
               </a>
