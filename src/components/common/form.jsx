@@ -1,20 +1,14 @@
 import React from "react";
 import Joi from "joi-browser";
-import Input from "./common/Input";
+import Input from "./Input";
 
-class Login extends React.Component {
-  state = {
-    account: { username: "", password: "" },
-    errors: {},
-  };
-  schema = {
-    username: Joi.string().required(),
-    password: Joi.string().required(),
-  };
+class Form extends React.Component {
+  state = {};
   handleSubmit = (e) => {
     e.preventDefault();
     const errors = this.validate();
     this.setState({ errors: errors || {} });
+    this.doSubmit();
   };
   validate = () => {
     const option = { abortEarly: false };
@@ -42,31 +36,24 @@ class Login extends React.Component {
     account[input.id] = input.value;
     this.setState({ account, errors });
   };
-  render() {
+  renderButton(label) {
+    return (
+      <button disabled={this.validate()} className="btn btn-primary">
+        {label}
+      </button>
+    );
+  }
+  renderInput(name) {
     const { account, errors } = this.state;
     return (
-      <div>
-        <form className="form-container" onSubmit={this.handleSubmit}>
-          <h1>Login</h1>
-          <Input
-            name="username"
-            value={account.username}
-            onChange={this.handleChange}
-            error={errors && errors.username}
-          />
-          <Input
-            name="password"
-            value={account.password}
-            onChange={this.handleChange}
-            error={errors && errors.password}
-          />
-          <button disabled={this.validate()} className="btn btn-primary">
-            Login
-          </button>
-        </form>
-      </div>
+      <Input
+        name={name}
+        value={account[name]}
+        onChange={this.handleChange}
+        error={errors[name]}
+      />
     );
   }
 }
 
-export default Login;
+export default Form;

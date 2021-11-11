@@ -5,7 +5,8 @@ import Movies from "./components/movies";
 import Customers from "./components/customers";
 import Rentals from "./components/rentals";
 import SaveMovies from "./components/saveMovies";
-import Login from "./components/login";
+import Login from "./components/loginForm";
+import Register from "./components/registerForm";
 
 class App extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class App extends React.Component {
           <Route path="/customers" component={Customers} />
           <Route path="/rentals" component={Rentals} />
           <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
           <Redirect from="/" exact to="/movies" />
         </BrowserRouter>
       </React.Fragment>
