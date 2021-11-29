@@ -14,7 +14,7 @@ class App extends React.Component {
       <React.Fragment>
         <BrowserRouter>
           <Navbar />
-          <Route path="/movies/:id" component={SaveMovies} />
+          <Route path="/movies/:id" exact component={SaveMovies} />
           <Route path="/movies" exact component={Movies} />
           <Route path="/customers" component={Customers} />
           <Route path="/rentals" component={Rentals} />

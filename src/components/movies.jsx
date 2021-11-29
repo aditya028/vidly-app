@@ -12,7 +12,7 @@ class Movies extends React.Component {
     movie: getmovies(),
     genre: getGenres(),
     pageSize: 4,
-    sortColumn : {path : 'title' , order : 'asc'} , 
+    sortColumn: { path: "title", order: "asc" },
     currentPage: 1,
     currentGenre: "All Genre",
   };
@@ -25,7 +25,11 @@ class Movies extends React.Component {
         (m) => this.state.currentGenre === m.genre.name
       );
 
-    const sorted = _.orderBy(movies , [this.state.sortColumn.path] , [this.state.sortColumn.order]) ; 
+    const sorted = _.orderBy(
+      movies,
+      [this.state.sortColumn.path],
+      [this.state.sortColumn.order]
+    );
     const movieSliced = paginate(
       sorted,
       this.state.currentPage,
@@ -52,8 +56,15 @@ class Movies extends React.Component {
             ) : (
               <React.Fragment>
                 <h3>Showing {movies.length} movies</h3>
+                <button
+                  onClick={this.renderMovieForm}
+                  type="button"
+                  className="btn btn-primary"
+                >
+                  New Movie
+                </button>
                 <MovieTable
-                  sortColumn = {this.state.sortColumn}
+                  sortColumn={this.state.sortColumn}
                   movieSliced={movieSliced}
                   onToggle={this.handleToggle}
                   onDelete={this.handleDelete}
@@ -72,8 +83,11 @@ class Movies extends React.Component {
       </div>
     );
   }
-  handleSort = sortColumn => {
-    this.setState({sortColumn});
+  renderMovieForm = () => {
+    this.props.history.push("/movies/newmovie");
+  };
+  handleSort = (sortColumn) => {
+    this.setState({ sortColumn });
   };
   handleGenre = (genreName) => {
     this.setState({ currentGenre: genreName });

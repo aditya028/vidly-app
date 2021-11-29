@@ -28,7 +28,7 @@ class Pagination extends React.Component {
               <a
                 onClick={() => onPageChange(page)}
                 className="page-link "
-                href="/"
+                href="#"
               >
                 {page}
               </a>

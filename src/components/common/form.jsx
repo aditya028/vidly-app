@@ -38,15 +38,20 @@ class Form extends React.Component {
   };
   renderButton(label) {
     return (
-      <button disabled={this.validate()} className="btn btn-primary">
+      <button
+        // disabled={this.validate()}
+        onClick={this.handleSubmit}
+        className="btn btn-primary"
+      >
         {label}
       </button>
     );
   }
-  renderInput(name) {
+  renderInput(name, label) {
     const { account, errors } = this.state;
     return (
       <Input
+        label={label}
         name={name}
         value={account[name]}
         onChange={this.handleChange}
